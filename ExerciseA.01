@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int total_seconds, hours, minutes, seconds;
+    
+    
+    printf("Enter the number of seconds: ");
+    if (scanf("%d", &total_seconds) != 1) {
+        printf("Error: Please enter a valid integer.\n");
+        return 1;
+    }
+
+    hours = total_seconds / 3600;
+    minutes = (total_seconds % 3600) / 60;
+    seconds = total_seconds % 60;
+    printf("\nTotal input: %d seconds\n", total_seconds);
+    printf("Converted time: %02d:%02d:%02d\n", hours, minutes, seconds);
+
+    return 0;
+}
