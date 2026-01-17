@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float weight; 
+    double height;
+    double bmi;
+    printf("Vendosni peshen (kg): ");
+    if (scanf("%f", &weight) != 1) return 1;
+
+    printf("Vendosni gjatesine tuaj (ne metra, psh 1.75): ");
+    if (scanf("%lf", &height) != 1) return 1;
+
+    bmi = weight / (height * height);
+    printf("BMI juaj eshte: %.2f\n", bmi);
+
+    if (bmi < 18.5) {
+        printf("Kategoria: Nenpeshe (Hani me shume).\n");
+    } 
+    else if (bmi >= 18.5 && bmi <= 24.9) {
+        printf("Kategoria: Normal.\n");
+    } 
+    else if (bmi >= 25.0 && bmi <= 29.9) {
+        printf("Kategoria: Mbi peshe.\n");
+    } 
+    else {
+        printf("Kategoria: Obez.\n");
+    }
+
+    return 0;
+}
