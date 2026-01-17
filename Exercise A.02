@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float input;
+    long integerPart;
+    float fractionalPart;
+
+    printf("Enter a floating-point number: ");
+    
+    if (scanf("%f", &input) != 1) {
+        printf("Error: Please enter a valid number.\n");
+        return 1;
+    }
+
+    integerPart = (long)input;
+    fractionalPart = input - (float)integerPart;
+    printf("Integer part: %ld\n", integerPart);
+    printf("Fractional part: %f\n", fractionalPart);
+
+    return 0;
+}
