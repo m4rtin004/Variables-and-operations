@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int numri, mbetja;
+
+    printf("Jepni nje numer pozitiv me maksimumi 3 shifra: ");
+    scanf("%d", &numri);
+
+    if (numri < 0 || numri > 999) {
+        printf("Gabim: Numri duhet te jete pozitiv dhe me jo me shume se 3 shifra.\n");
+        return 1;
+    }
+
+    printf("Numri i prapambetur eshte: ");
+
+    if (numri == 0) {
+        printf("0");
+    }
+
+    while (numri > 0) {
+        mbetja = numri % 10;     
+     printf("%d", mbetja);    
+        numri = numri / 10;       
+    }
+
+    printf("\n");
+    return 0;
+}
